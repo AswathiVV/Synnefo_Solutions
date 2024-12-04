@@ -3,6 +3,8 @@ import os
 from app.models import Contact
 from .models import *
 # Create your views here.
+from django.core.mail import send_mail
+from django.conf import settings
 
 def home(req):
     return render(req,'home.html')
