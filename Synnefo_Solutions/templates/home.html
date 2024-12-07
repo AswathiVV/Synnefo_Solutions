@@ -13,7 +13,28 @@
 {% load static %}
 <body>
 <style>
-    .demo {
+  .navbar-brand img {
+    height: 40px; 
+    }
+
+  .nav-link {
+    text-transform: capitalize;
+     margin: 0 10px;
+   }
+
+  .navbar-nav {
+    align-items: center;
+    }
+
+  .navbar-toggler {
+    border: none;
+    utline: none;
+  }
+
+  .navbar-toggler-icon {
+    background-color: #000;
+  }
+  .demo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +98,7 @@
 .hero-section p {
   font-size: 1.25rem;
 }
-footer{
+/* footer{
   height: 400px;
 }
 footer a {
@@ -90,7 +111,30 @@ footer .list-unstyled a:hover {
 
 footer .bi {
   font-size: 1.5rem;
-}
+} */
+footer{
+            font-family: FFDINforPuma, Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+          }
+    
+          footer a{
+          text-decoration: none;
+          color: rgb(162, 162, 162);
+          font-size: small;
+          }
+          footer h6{
+          font-weight: bold;
+          }
+          footer  a:hover{
+          color: white;
+          }
+          footer svg:hover{
+              color: white;
+          }
+          footer img{
+          padding: 5px;
+          margin-bottom: 5px;
+          }
 
   @media (max-width: 768px) {
     .text-overlay h2 {
@@ -98,6 +142,11 @@ footer .bi {
       padding: 0 15px;
     }
   }
+  @media (max-width: 576px) {
+            .navbar-nav {
+                text-align: center;
+            }
+        }
 
 </style>    
 
@@ -106,7 +155,7 @@ footer .bi {
     <a class="navbar-brand" href="#">
       <img src="{% static 'images/S.png' %}" alt="Logo" style="height: 40px;border-radius: 30px;">
    </a>
-    <!-- <a class="navbar-brand" href="#">Synnefo Solutions</a> -->
+    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -256,11 +305,11 @@ footer .bi {
 </div>
 <br><br>
 
-<footer class="bg-dark text-light pt-5 mt-3">
+<footer class="bg-dark text-light pt-5 mt-3" style="font-size: 15px;">
   <div class="container">
-    <div class="row">
-      <div class="col-md-3 mb-5 " >
-        <h6>SUPPORT</h6>
+      <div class="row">
+          <div class="col-md-3">
+              <h6>SUPPORT</h6>
         <ul class="list-unstyled">
           <li><a href="courses" class="text-light">Courses</a></li>
           <li><a href="courses" class="text-light">Full Stack Web Development</a></li>
@@ -271,7 +320,7 @@ footer .bi {
           <li><a href="courses" class="text-light">Flutter</a></li>
         </ul>
       </div>
-      <div class="col-md-3 mb-4 mb-md-0">
+      <div class="col-md-3">
         <h5>FAQs</h5>
         <ul class="list-unstyled">
           <li><a href="#" class="text-light">My Account</a></li>
@@ -280,7 +329,7 @@ footer .bi {
           <li><a href="#" class="text-light">Terms&Conditions</a></li>
         </ul>
       </div>
-      <div class="col-md-3 mb-4 mb-md-0">
+      <div class="col-md-3">
         <h6>Get in Touch</h6>
         <ul class="list-unstyled">
           <li><a href="#" class="text-light">Company</a></li>
